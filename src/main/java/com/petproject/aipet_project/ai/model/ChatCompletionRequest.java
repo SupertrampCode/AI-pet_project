@@ -16,6 +16,8 @@ public class ChatCompletionRequest {
 
     List<ChatMessage> messages;
 
+    final int max_tokens = AIConfigs.max_tokens;
+
     public ChatCompletionRequest(String prompt) {
         this.messages = new ArrayList<>();
         this.messages.add(new ChatMessage("user", prompt));
